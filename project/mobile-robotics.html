@@ -1,0 +1,381 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interdisciplinary Robotics Competition — Paul Huot-Marchand</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.7;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(13, 17, 23, 0.95);
+            border-bottom: 1px solid #30363d;
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-family: monospace;
+            font-weight: bold;
+            color: #f0f6fc;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 24px;
+        }
+
+        header {
+            padding: 75px 0 45px;
+        }
+
+        .label {
+            color: #58a6ff;
+            font-family: monospace;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #f0f6fc;
+            font-size: clamp(34px, 6vw, 58px);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 19px;
+            color: #8b949e;
+            margin-bottom: 24px;
+        }
+
+        .award {
+            color: #d4af37;
+            font-family: monospace;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-height: 520px;
+            object-fit: cover;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #161b22;
+        }
+
+        section {
+            padding: 45px 0;
+            border-bottom: 1px solid #21262d;
+        }
+
+        h2 {
+            color: #f0f6fc;
+            font-family: monospace;
+            font-size: 25px;
+            margin-bottom: 24px;
+        }
+
+        h2::before {
+            content: "// ";
+            color: #58a6ff;
+        }
+
+        h3 {
+            color: #f0f6fc;
+            margin: 25px 0 10px;
+        }
+
+        p {
+            color: #8b949e;
+            margin-bottom: 18px;
+        }
+
+        ul {
+            color: #8b949e;
+            padding-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .panel {
+            padding: 24px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 5px 10px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            color: #8b949e;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 25px;
+            font-family: monospace;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 16px;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            background: #161b22;
+            margin: 5px 8px 5px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #484f58;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        @media (max-width: 650px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                padding-top: 45px;
+            }
+
+            .container {
+                padding: 0 18px;
+            }
+
+            .nav-container {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a class="nav-name" href="../index.html">
+                Paul Huot-Marchand
+            </a>
+
+            <a href="../index.html#projects">
+                ← All projects
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <header>
+            <a class="back" href="../index.html#projects">
+                ← Back to portfolio
+            </a>
+
+            <div class="label">// PROJECT · 2026</div>
+
+            <h1>Interdisciplinary Robotics Competition</h1>
+
+            <div class="subtitle">
+                Autonomous robotics · EPFL
+            </div>
+
+            <div class="award">
+                🏆 1st Place — Team ROBZ, Group 4
+            </div>
+
+            <img
+                class="hero-image"
+                src="../images/Robotic_competition_cover.jpeg"
+                alt="Competition robot">
+        </header>
+
+        <section>
+            <h2>Overview</h2>
+
+            <p>
+                As part of the EPFL Interdisciplinary Robotics
+                Competition 2026, I worked in a three-person team
+                to develop an autonomous robot capable of navigating
+                an arena, handling obstacles, and completing a
+                sequence of tasks.
+            </p>
+
+            <p>
+                My main responsibility was the high-level software,
+                from visual perception and localization to navigation
+                and autonomous mission execution.
+            </p>
+        </section>
+
+        <section>
+            <h2>My Contributions</h2>
+
+            <div class="grid">
+                <div class="panel">
+                    <h3>Computer Vision</h3>
+                    <p>
+                        Implemented local visual perception to extract
+                        information from the robot's camera and support
+                        autonomous decision making.
+                    </p>
+                </div>
+
+                <div class="panel">
+                    <h3>Localization</h3>
+                    <p>
+                        Developed the localization pipeline and an
+                        Extended Kalman Filter to estimate the robot's
+                        position and orientation.
+                    </p>
+                </div>
+
+                <div class="panel">
+                    <h3>Navigation</h3>
+                    <p>
+                        Implemented path planning using A* and
+                        integrated navigation decisions into the
+                        robot's high-level software.
+                    </p>
+                </div>
+
+                <div class="panel">
+                    <h3>Mission Execution</h3>
+                    <p>
+                        Structured the autonomous behavior as a
+                        state machine coordinating perception,
+                        navigation, and task execution.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Implementation</h2>
+
+            <p>
+                The high-level software ran in Python on a Raspberry
+                Pi and communicated with the robot's ESP32-based
+                low-level controller.
+            </p>
+
+            <ul>
+                <li>Modular software architecture in Python.</li>
+                <li>Camera-based local perception.</li>
+                <li>Extended Kalman Filter for localization.</li>
+                <li>A* path planning for navigation.</li>
+                <li>Finite-state-machine-based mission logic.</li>
+                <li>Serial communication with the embedded controller.</li>
+            </ul>
+
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">EKF</span>
+                <span class="tag">A*</span>
+                <span class="tag">Raspberry Pi</span>
+                <span class="tag">ESP32</span>
+                <span class="tag">Embedded Systems</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Results</h2>
+
+            <p>
+                Our team finished first in the EPFL Interdisciplinary
+                Robotics Competition 2026.
+            </p>
+
+            <p>
+                The project gave me practical experience in autonomous
+                robotics, software integration, and collaborative
+                development under competition constraints.
+            </p>
+        </section>
+
+        <section>
+            <h2>Links</h2>
+
+            <a class="button"
+               href="https://github.com/Megapaul25"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a class="button" href="../index.html#projects">
+                More projects
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 Paul Huot-Marchand
+    </footer>
+
+</body>
+</html>
+```
