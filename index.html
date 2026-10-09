@@ -43,7 +43,6 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-
             background: rgba(13, 17, 23, 0.95);
             border-bottom: 1px solid #30363d;
             backdrop-filter: blur(8px);
@@ -53,7 +52,6 @@
             max-width: 1100px;
             margin: auto;
             padding: 16px 24px;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -167,16 +165,12 @@
         .button {
             display: inline-block;
             padding: 10px 18px;
-
             border: 1px solid #30363d;
             border-radius: 6px;
-
             background: #161b22;
             color: #c9d1d9;
-
             font-family: monospace;
             font-size: 14px;
-
             transition: 0.2s;
         }
 
@@ -205,15 +199,11 @@
 
         .robot-dog {
             position: absolute;
-
             width: 120px;
             height: auto;
-
             bottom: 20px;
             left: -180px;
-
             pointer-events: none;
-
             animation: robotWalk 18s linear infinite;
         }
 
@@ -242,10 +232,7 @@
             border: 1px solid #30363d;
             border-radius: 8px;
             overflow: hidden;
-
-            transition:
-                transform 0.2s,
-                border-color 0.2s;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
         .project-card:hover {
@@ -275,9 +262,24 @@
             color: #58a6ff;
             font-family: monospace;
             font-size: 13px;
-
             margin-top: 0;
             margin-bottom: 15px;
+        }
+
+        /* COMPETITION WINNER — GOLD */
+
+        .project-award {
+            color: #d4af37;
+            font-family: monospace;
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: -5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.4px;
+        }
+
+        .project-award::before {
+            content: "🏆 ";
         }
 
         .project-content p {
@@ -294,13 +296,10 @@
 
         .tag {
             padding: 4px 8px;
-
             border-radius: 4px;
             border: 1px solid #30363d;
-
             background: #0d1117;
             color: #8b949e;
-
             font-family: monospace;
             font-size: 12px;
         }
@@ -336,10 +335,7 @@
             border: 1px solid #30363d;
             border-radius: 8px;
             overflow: hidden;
-
-            transition:
-                transform 0.2s,
-                border-color 0.2s;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
         .small-project:hover {
@@ -448,7 +444,6 @@
         ========================= */
 
         @media (max-width: 800px) {
-
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -472,7 +467,6 @@
         }
 
         @media (max-width: 550px) {
-
             section {
                 padding: 80px 0;
             }
@@ -524,7 +518,6 @@
 
     <nav>
         <div class="nav-container">
-
             <div class="nav-name">
                 Paul Huot-Marchand
             </div>
@@ -535,32 +528,23 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
-
         </div>
     </nav>
-
 
     <!-- =========================
          HOME
     ========================= -->
 
     <section id="home">
-
         <div class="container">
-
             <div class="hero">
 
                 <div class="hero-label">
                     // Project Portfolio
                 </div>
 
-                <h1>
-                    Paul
-                </h1>
-
-                <h1>
-                    Huot-Marchand
-                </h1>
+                <h1>Paul</h1>
+                <h1>Huot-Marchand</h1>
 
                 <div class="hero-subtitle">
                     Mobile Robotics · Legged Robotics
@@ -584,85 +568,67 @@
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a
-                        class="button primary"
-                        href="#projects">
+                    <a class="button primary" href="#projects">
                         View my projects
                     </a>
 
-                    <a
-                        class="button"
-                        href="https://github.com/Megapaul25"
-                        target="_blank">
+                    <a class="button"
+                       href="https://github.com/Megapaul25"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         GitHub
                     </a>
 
-                    <a
-                        class="button"
-                        href="https://www.linkedin.com/in/paul-huot-marchand-636573434/"
-                        target="_blank">
+                    <a class="button"
+                       href="https://www.linkedin.com/in/paul-huot-marchand-636573434/"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         LinkedIn
                     </a>
 
-                    <a
-                        class="button"
-                        href="CV.pdf"
-                        target="_blank">
+                    <a class="button" href="CV.pdf" target="_blank">
                         CV
                     </a>
-
                 </div>
 
             </div>
-
         </div>
-
 
         <!-- Walking quadruped -->
         <img
             class="robot-dog"
             src="images/robot_dog.gif"
             alt="Walking quadruped robot">
-
     </section>
-
 
     <!-- =========================
          PROJECTS
     ========================= -->
 
     <section id="projects">
-
         <div class="container">
 
-            <h2 class="section-title">
-                Projects
-            </h2>
-
-
-            <!-- MAIN PROJECTS -->
+            <h2 class="section-title">Projects</h2>
 
             <div class="projects-grid">
-
 
                 <!-- EPFL ROBOTICS COMPETITION -->
 
                 <div class="project-card">
-
                     <img
                         class="project-image"
                         src="images/Robotic_competition_cover.jpeg"
                         alt="Interdisciplinary Robotics Competition">
 
                     <div class="project-content">
-
-                        <h3>
-                            Interdisciplinary Robotics Competition
-                        </h3>
+                        <h3>Interdisciplinary Robotics Competition</h3>
 
                         <div class="project-meta">
                             EPFL · 2026
+                        </div>
+
+                        <div class="project-award">
+                            Winner of the Competition
                         </div>
 
                         <p>
@@ -684,26 +650,19 @@
                             <span class="tag">Navigation</span>
                             <span class="tag">Embedded</span>
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <!-- LASA -->
 
                 <div class="project-card">
-
                     <img
                         class="project-image"
                         src="images/LASA_crawling_hand.webp"
                         alt="Robotic crawling hand">
 
                     <div class="project-content">
-
-                        <h3>
-                            Research Assistant
-                        </h3>
+                        <h3>Research Assistant</h3>
 
                         <div class="project-meta">
                             LASA Laboratory, EPFL · 2026 – Present
@@ -735,26 +694,19 @@
                             <span class="tag">Electronics</span>
                             <span class="tag">Prototyping</span>
                         </div>
-
                     </div>
-
                 </div>
-
 
                 <!-- BIOROB -->
 
                 <div class="project-card">
-
                     <img
                         class="project-image"
                         src="images/swimmingbot.gif"
                         alt="Quadruped robot swimming simulation">
 
                     <div class="project-content">
-
-                        <h3>
-                            Non-Terrestrial Quadruped Locomotion
-                        </h3>
+                        <h3>Non-Terrestrial Quadruped Locomotion</h3>
 
                         <div class="project-meta">
                             BioRob Laboratory, EPFL · 2026 – Present
@@ -779,48 +731,35 @@
                             <span class="tag">MuJoCo</span>
                             <span class="tag">Simulation</span>
                             <span class="tag">Locomotion</span>
-                            
                         </div>
-
                     </div>
-
                 </div>
 
             </div>
 
-
-            <!-- =========================
-                 OTHER PROJECTS
-            ========================= -->
+            <!-- OTHER PROJECTS -->
 
             <div class="other-projects">
-
-                <h3 class="other-projects-title">
-                    Other Projects
-                </h3>
+                <h3 class="other-projects-title">Other Projects</h3>
 
                 <div class="small-projects-grid">
-
 
                     <!-- LEGGED ROBOTICS -->
 
                     <div class="small-project">
-
                         <img
                             class="small-project-image"
                             src="images/leggedbot.gif"
                             alt="Legged robot simulation">
 
                         <div class="small-project-content">
-
-                            <h4>
-                                Legged Robotics
-                            </h4>
+                            <h4>Legged Robotics</h4>
 
                             <p>
                                 Control, optimization, and
                                 reinforcement learning-based training
-                                of a quadruped robot in simulation using CPGs (Central Pattern Generators).
+                                of a quadruped robot in simulation using
+                                CPGs (Central Pattern Generators).
                             </p>
 
                             <div class="project-tags">
@@ -828,26 +767,19 @@
                                 <span class="tag">Reinforcement Learning</span>
                                 <span class="tag">Legged Robotics</span>
                             </div>
-
                         </div>
-
                     </div>
-
 
                     <!-- EVOLUTIONARY ROBOTICS -->
 
                     <div class="small-project">
-
                         <img
                             class="small-project-image"
                             src="images/evobot.gif"
                             alt="Evolutionary robotics simulation">
 
                         <div class="small-project-content">
-
-                            <h4>
-                                Evolutionary Robotics
-                            </h4>
+                            <h4>Evolutionary Robotics</h4>
 
                             <p>
                                 Use of evolutionary algorithms for
@@ -860,21 +792,14 @@
                                 <span class="tag">MuJoCo</span>
                                 <span class="tag">Optimization</span>
                             </div>
-
                         </div>
-
                     </div>
-
 
                     <!-- MOBILE ROBOTICS -->
 
                     <div class="small-project">
-
                         <div class="small-project-content">
-
-                            <h4>
-                                Mobile Robotics Project
-                            </h4>
+                            <h4>Mobile Robotics Project</h4>
 
                             <p>
                                 Programmed a Thymio robot with local and
@@ -887,21 +812,14 @@
                                 <span class="tag">Navigation</span>
                                 <span class="tag">Computer Vision</span>
                             </div>
-
                         </div>
-
                     </div>
-
 
                     <!-- INDUSTRIAL MAINTENANCE -->
 
                     <div class="small-project">
-
                         <div class="small-project-content">
-
-                            <h4>
-                                Industrial Robot Maintenance
-                            </h4>
+                            <h4>Industrial Robot Maintenance</h4>
 
                             <p>
                                 Performed maintenance on an old SCARA robot,
@@ -914,21 +832,14 @@
                                 <span class="tag">Diagnostics</span>
                                 <span class="tag">Industrial Robotics</span>
                             </div>
-
                         </div>
-
                     </div>
-
 
                     <!-- ABB -->
 
                     <div class="small-project">
-
                         <div class="small-project-content">
-
-                            <h4>
-                                Industrial Robot Programming
-                            </h4>
+                            <h4>Industrial Robot Programming</h4>
 
                             <p>
                                 Programmed an ABB industrial manipulator
@@ -942,36 +853,26 @@
                                 <span class="tag">Robot Programming</span>
                                 <span class="tag">Simulation</span>
                             </div>
-
                         </div>
-
                     </div>
 
                 </div>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- =========================
          ABOUT
     ========================= -->
 
     <section id="about">
-
         <div class="container">
 
-            <h2 class="section-title">
-                About
-            </h2>
+            <h2 class="section-title">About</h2>
 
             <div class="about-grid">
-
                 <div class="about-text">
-
                     <p>
                         I am an MSc student in Robotics at EPFL, with a
                         background in microengineering and a specialization
@@ -990,18 +891,12 @@
                         software development, which are two of my main
                         strengths and areas of specialization.
                     </p>
-
                 </div>
 
-
                 <div>
-
-                    <div class="skills-title">
-                        // SKILLS
-                    </div>
+                    <div class="skills-title">// SKILLS</div>
 
                     <div class="skills">
-
                         <span class="skill">Python</span>
                         <span class="skill">C++</span>
                         <span class="skill">MATLAB</span>
@@ -1013,32 +908,23 @@
                         <span class="skill">Computer Vision</span>
                         <span class="skill">Embedded Systems</span>
                         <span class="skill">Mechanical Design</span>
-
                     </div>
-
                 </div>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- =========================
          CONTACT
     ========================= -->
 
     <section id="contact">
-
         <div class="container">
 
-            <h2 class="section-title">
-                Contact
-            </h2>
+            <h2 class="section-title">Contact</h2>
 
             <div class="contact-box">
-
                 <p>
                     If you would like to discuss a robotics project,
                     internship opportunity, or collaboration, feel free
@@ -1046,7 +932,6 @@
                 </p>
 
                 <div class="contact-links">
-
                     <a
                         class="contact-link"
                         href="mailto:paul.huot-marchand@epfl.ch">
@@ -1056,25 +941,23 @@
                     <a
                         class="contact-link"
                         href="https://github.com/Megapaul25"
-                        target="_blank">
+                        target="_blank"
+                        rel="noopener noreferrer">
                         GitHub
                     </a>
 
                     <a
                         class="contact-link"
                         href="https://www.linkedin.com/in/paul-huot-marchand-636573434/"
-                        target="_blank">
+                        target="_blank"
+                        rel="noopener noreferrer">
                         LinkedIn
                     </a>
-
                 </div>
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- =========================
          FOOTER
