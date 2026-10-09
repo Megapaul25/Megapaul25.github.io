@@ -241,7 +241,7 @@
             </div>
 
             <div class="award">
-                🏆 1st Place — Team ROBZ, Group 4
+                🏆 1st Place — Team ROBZ
             </div>
 
             <img
@@ -256,14 +256,14 @@
             <p>
                 As part of the EPFL Interdisciplinary Robotics
                 Competition 2026, I worked in a three-person team
-                (Team ROBZ, Group 4: Arnaud Buchel, Jan Juraszek, and Paul Huot-Marchand)[cite: 1] 
+                (Team ROBZ, Group 4: Arnaud Buchel, Jan Juraszek, and myself)
                 to develop an autonomous robot capable of navigating
-                an arena with multiple scoring zones (Zone 1 to Zone 4)[cite: 5], handling obstacles[cite: 6], and completing a
-                sequence of tasks[cite: 6].
+                an arena with multiple scoring zones (Zone 1 to Zone 4), handling obstacles, and completing a
+                sequence of tasks.
             </p>
 
             <p>
-                My main responsibility was the high-level software[cite: 7], from visual perception and beacon-based localization[cite: 17, 30] to navigation[cite: 7] and autonomous mission execution[cite: 7].
+                My main responsibility was the high-level software, from visual perception and beacon-based localization to navigation and autonomous mission execution.
             </p>
         </section>
 
@@ -274,28 +274,28 @@
                 <div class="panel">
                     <h3>Computer Vision</h3>
                     <p>
-                        Implemented local visual perception using RGB camera processing to extract target features, detect arena corner beacons, and support real-time autonomous decision making[cite: 14, 17].
+                        Implemented local visual perception using RGB camera processing to extract target features, detect arena corner beacons, and support real-time autonomous decision making.
                     </p>
                 </div>
 
                 <div class="panel">
                     <h3>Localization</h3>
                     <p>
-                        Developed the global beacon-based triangulation algorithm (solving circle intersections from relative angles $\theta_{AB}$ and $\theta_{BC}$)[cite: 29, 30] combined with an Extended Kalman Filter (EKF) sensor fusion[cite: 16] to estimate the robot's pose[cite: 16].
+                        Developed the global beacon-based triangulation algorithm (solving circle intersections from relative angles) combined with an Extended Kalman Filter (EKF) sensor fusion to estimate the robot's pose.
                     </p>
                 </div>
 
                 <div class="panel">
                     <h3>Navigation</h3>
                     <p>
-                        Implemented path planning using the A* algorithm[cite: 7] and integrated navigation decision-making directly into the robot's high-level controller[cite: 7].
+                        Implemented path planning using the A* algorithm and integrated navigation decision-making directly into the robot's high-level controller.
                     </p>
                 </div>
 
                 <div class="panel">
                     <h3>Mission Execution</h3>
                     <p>
-                        Structured the autonomous behavior as a Finite State Machine (FSM) coordinating perception, navigation, piece-collecting mechanisms, and task execution[cite: 7].
+                        Structured the autonomous behavior as a Finite State Machine (FSM) coordinating perception, navigation, piece-collecting mechanisms, and task execution.
                     </p>
                 </div>
             </div>
@@ -305,16 +305,16 @@
             <h2>Technical Implementation</h2>
 
             <p>
-                The high-level software ran in Python on a Raspberry Pi Single Board Computer (SBC) handling vision and path planning[cite: 7, 18], communicating via serial interface with an ESP32 microcontroller for low-level motor control and sensor monitoring[cite: 7, 17].
+                The high-level software ran in Python on a Raspberry Pi Single Board Computer (SBC) handling vision and path planning, communicating via serial interface with an ESP32 microcontroller for low-level motor control and sensor monitoring.
             </p>
 
             <ul>
-                <li>Modular software architecture written in Python running on Raspberry Pi[cite: 7, 18].</li>
-                <li>Camera-based visual perception for target detection and beacon landmark triangulation[cite: 14, 17, 30].</li>
-                <li>Extended Kalman Filter (EKF) combining wheel encoders and optical measurements for drift-free localization[cite: 14, 16].</li>
-                <li>A* algorithm for optimal path planning across arena zones[cite: 5, 7].</li>
-                <li>Finite-State-Machine (FSM) orchestrating mission logic, grabbing, storage, and trapdoor releasing[cite: 7, 26, 28].</li>
-                <li>Serial communication protocol between the Raspberry Pi SBC and the ESP32 low-level MCU[cite: 7, 17, 18].</li>
+                <li>Modular software architecture written in Python running on Raspberry Pi.</li>
+                <li>Camera-based visual perception for target detection and beacon landmark triangulation.</li>
+                <li>Extended Kalman Filter (EKF) combining wheel encoders and optical measurements for drift-free localization.</li>
+                <li>A* algorithm for optimal path planning across arena zones.</li>
+                <li>Finite-State-Machine (FSM) orchestrating mission logic, grabbing, storage, and trapdoor releasing.</li>
+                <li>Serial communication protocol between the Raspberry Pi SBC and the ESP32 low-level MCU.</li>
             </ul>
 
             <div class="tags">
@@ -333,11 +333,11 @@
             <h2>Results</h2>
 
             <p>
-                Our team (ROBZ) finished 1st place in the EPFL Interdisciplinary Robotics Competition 2026[cite: 1].
+                Our team (ROBZ) finished 1st place in the EPFL Interdisciplinary Robotics Competition 2026.
             </p>
 
             <p>
-                The project provided hands-on experience in system architecture decomposition[cite: 7], sensor fusion[cite: 16], real-time vision processing[cite: 14], and hardware-software integration under competitive constraints[cite: 1, 5, 8].
+                The project provided hands-on experience in system architecture decomposition, sensor fusion, real-time vision processing, and hardware-software integration under competitive constraints.
             </p>
         </section>
 
@@ -359,7 +359,7 @@
     </main>
 
     <footer>
-        © 2026 Paul Huot-Marchand · EPFL Group 4 (Team ROBZ)[cite: 1]
+        © 2026 Paul Huot-Marchand
     </footer>
 
 </body>

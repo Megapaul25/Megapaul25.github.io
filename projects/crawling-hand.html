@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Interdisciplinary Robotics Competition — Paul Huot-Marchand</title>
+    <title>Robotic Crawling Hand — Paul Huot-Marchand</title>
 
     <style>
         * {
@@ -86,10 +87,11 @@
             margin-bottom: 24px;
         }
 
-        .award {
-            color: #d4af37;
-            font-family: monospace;
-            font-weight: bold;
+        .notice {
+            color: #8b949e;
+            font-size: 14px;
+            border-left: 3px solid #30363d;
+            padding-left: 14px;
             margin-bottom: 24px;
         }
 
@@ -232,39 +234,45 @@
                 ← Back to portfolio
             </a>
 
-            <div class="label">// PROJECT · 2026</div>
+            <div class="label">// RESEARCH PROJECT</div>
 
-            <h1>Interdisciplinary Robotics Competition</h1>
+            <h1>Robotic Crawling Hand</h1>
 
             <div class="subtitle">
-                Autonomous robotics · EPFL
+                Robotics research · Simulation · Hardware integration
             </div>
 
-            <div class="award">
-                🏆 1st Place — Team ROBZ, Group 4
-            </div>
+            <p class="notice">
+                This project is subject to a non-disclosure agreement.
+                The description is intentionally limited to general
+                technical aspects.
+            </p>
 
             <img
                 class="hero-image"
-                src="../images/Robotic_competition_cover.jpeg"
-                alt="Competition robot">
+                src="../images/LASA_crawling_hand.webp"
+                alt="Robotic crawling hand research project">
         </header>
 
         <section>
             <h2>Overview</h2>
 
             <p>
-                As part of the EPFL Interdisciplinary Robotics
-                Competition 2026, I worked in a three-person team
-                to develop an autonomous robot capable of navigating
-                an arena, handling obstacles, and completing a
-                sequence of tasks.
+                As part of a robotics research project, I contribute
+                to the development and testing of a robotic crawling
+                hand. The work combines simulation, hardware
+                integration, and experimental prototyping.
             </p>
 
             <p>
-                My main responsibility was the high-level software,
-                from visual perception and localization to navigation
-                and autonomous mission execution.
+                My work involves connecting software and physical
+                hardware, testing robotic behaviors, and improving
+                the reliability of the overall system.
+            </p>
+
+            <p>
+                Further details about the design and application
+                are omitted due to confidentiality requirements.
             </p>
         </section>
 
@@ -273,96 +281,96 @@
 
             <div class="grid">
                 <div class="panel">
-                    <h3>Computer Vision</h3>
+                    <h3>Simulation</h3>
                     <p>
-                        Implemented local visual perception to extract
-                        information from the robot's camera and support
-                        autonomous decision making.
+                        Working with MuJoCo to develop and test
+                        robotic behaviors in simulation, supporting
+                        development before and alongside physical
+                        experiments.
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Localization</h3>
+                    <h3>Hardware Integration</h3>
                     <p>
-                        Developed the localization pipeline and an
-                        Extended Kalman Filter to estimate the robot's
-                        position and orientation.
+                        Integrating software with motors, sensors,
+                        and embedded controllers to operate the
+                        robotic system.
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Navigation</h3>
+                    <h3>Prototyping</h3>
                     <p>
-                        Implemented path planning using A* and
-                        integrated navigation decisions into the
-                        robot's high-level software.
+                        Contributing to the practical development
+                        of the robotic platform through hardware
+                        assembly, CAD-related work, and prototyping.
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Mission Execution</h3>
+                    <h3>Testing and Debugging</h3>
                     <p>
-                        Structured the autonomous behavior as a
-                        state machine coordinating perception,
-                        navigation, and task execution.
+                        Testing system behavior, investigating
+                        hardware and software issues, and refining
+                        the integration between system components.
                     </p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Technical Implementation</h2>
+            <h2>Technical Environment</h2>
 
             <p>
-                The high-level software ran in Python on a Raspberry
-                Pi and communicated with the robot's ESP32-based
-                low-level controller.
+                The project involves both simulated and physical
+                robotic systems, requiring coordination between
+                control software, embedded electronics, and
+                mechanical components.
             </p>
-
-            <ul>
-                <li>Modular software architecture in Python.</li>
-                <li>Camera-based local perception.</li>
-                <li>Extended Kalman Filter for localization.</li>
-                <li>A* path planning for navigation.</li>
-                <li>Finite-state-machine-based mission logic.</li>
-                <li>Serial communication with the embedded controller.</li>
-            </ul>
 
             <div class="tags">
+                <span class="tag">MuJoCo</span>
                 <span class="tag">Python</span>
-                <span class="tag">Computer Vision</span>
-                <span class="tag">EKF</span>
-                <span class="tag">A*</span>
-                <span class="tag">Raspberry Pi</span>
-                <span class="tag">ESP32</span>
+                <span class="tag">Robotics Simulation</span>
+                <span class="tag">Motor Control</span>
+                <span class="tag">Sensors</span>
                 <span class="tag">Embedded Systems</span>
+                <span class="tag">CAD</span>
+                <span class="tag">Prototyping</span>
             </div>
         </section>
 
         <section>
-            <h2>Results</h2>
+            <h2>Objectives and Learning</h2>
 
             <p>
-                Our team finished first in the EPFL Interdisciplinary
-                Robotics Competition 2026.
+                This project gives me hands-on experience with
+                research-oriented robotics development, particularly
+                the challenges of bringing together simulation,
+                mechanical design, electronics, and software.
             </p>
 
             <p>
-                The project gave me practical experience in autonomous
-                robotics, software integration, and collaborative
-                development under competition constraints.
+                It also allows me to work across the boundary
+                between virtual testing and physical experimentation,
+                where integration and debugging are essential
+                parts of the development process.
+            </p>
+        </section>
+
+        <section>
+            <h2>Confidentiality</h2>
+
+            <p>
+                In accordance with the project's NDA, detailed
+                technical specifications, internal implementation
+                details, and non-public results are not disclosed.
             </p>
         </section>
 
         <section>
             <h2>Links</h2>
-
-            <a class="button"
-               href="https://github.com/Megapaul25"
-               target="_blank"
-               rel="noopener noreferrer">
-                GitHub
-            </a>
 
             <a class="button" href="../index.html#projects">
                 More projects
@@ -377,4 +385,3 @@
 
 </body>
 </html>
-

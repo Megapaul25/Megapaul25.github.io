@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Interdisciplinary Robotics Competition — Paul Huot-Marchand</title>
+    <title>Underwater Robot Locomotion — Paul Huot-Marchand</title>
 
     <style>
         * {
@@ -86,10 +86,15 @@
             margin-bottom: 24px;
         }
 
-        .award {
-            color: #d4af37;
+        .status {
+            display: inline-block;
+            color: #8b949e;
             font-family: monospace;
-            font-weight: bold;
+            font-size: 13px;
+            border: 1px solid #30363d;
+            background: #161b22;
+            border-radius: 4px;
+            padding: 5px 10px;
             margin-bottom: 24px;
         }
 
@@ -232,137 +237,125 @@
                 ← Back to portfolio
             </a>
 
-            <div class="label">// PROJECT · 2026</div>
+            <div class="label">// RESEARCH PROJECT</div>
 
-            <h1>Interdisciplinary Robotics Competition</h1>
+            <h1>Underwater Robot Locomotion</h1>
 
             <div class="subtitle">
-                Autonomous robotics · EPFL
+                Bio-inspired robotics · Fluid simulation · Locomotion
             </div>
 
-            <div class="award">
-                🏆 1st Place — Team ROBZ, Group 4
+            <div class="status">
+                ● Ongoing project
             </div>
 
             <img
                 class="hero-image"
-                src="../images/Robotic_competition_cover.jpeg"
-                alt="Competition robot">
+                src="../images/swimmingbot.gif"
+                alt="Underwater robot locomotion simulation">
         </header>
 
         <section>
             <h2>Overview</h2>
 
             <p>
-                As part of the EPFL Interdisciplinary Robotics
-                Competition 2026, I worked in a three-person team
-                to develop an autonomous robot capable of navigating
-                an arena, handling obstacles, and completing a
-                sequence of tasks.
+                This ongoing project explores robotic locomotion in
+                aquatic environments, with a focus on the interaction
+                between robot dynamics and surrounding fluid.
             </p>
 
             <p>
-                My main responsibility was the high-level software,
-                from visual perception and localization to navigation
-                and autonomous mission execution.
+                My current work focuses on developing and investigating
+                simulation approaches that can be used to study the
+                behavior of robots moving through water.
+            </p>
+
+            <p>
+                The project is still in progress, and the simulation
+                setup and its results are being actively investigated.
             </p>
         </section>
 
         <section>
-            <h2>My Contributions</h2>
+            <h2>Current Work</h2>
 
             <div class="grid">
                 <div class="panel">
-                    <h3>Computer Vision</h3>
+                    <h3>Fluid Simulation</h3>
                     <p>
-                        Implemented local visual perception to extract
-                        information from the robot's camera and support
-                        autonomous decision making.
+                        Exploring fluid simulation methods and their
+                        integration with robotic simulation to study
+                        fluid–body interactions.
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Localization</h3>
+                    <h3>Simulation Integration</h3>
                     <p>
-                        Developed the localization pipeline and an
-                        Extended Kalman Filter to estimate the robot's
-                        position and orientation.
+                        Working on coupling fluid dynamics with
+                        MuJoCo-based robotic simulations, with the
+                        goal of testing different configurations.
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Navigation</h3>
+                    <h3>Locomotion</h3>
                     <p>
-                        Implemented path planning using A* and
-                        integrated navigation decisions into the
-                        robot's high-level software.
+                        Investigating how robot motion and body
+                        dynamics interact with the surrounding
+                        aquatic environment.
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Mission Execution</h3>
+                    <h3>Validation and Debugging</h3>
                     <p>
-                        Structured the autonomous behavior as a
-                        state machine coordinating perception,
-                        navigation, and task execution.
+                        Testing the simulation pipeline, investigating
+                        numerical issues, and examining the computed
+                        forces and torques.
                     </p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Technical Implementation</h2>
+            <h2>Technical Environment</h2>
 
             <p>
-                The high-level software ran in Python on a Raspberry
-                Pi and communicated with the robot's ESP32-based
-                low-level controller.
+                The work involves extending and testing simulation
+                workflows to better represent the interaction between
+                robotic bodies and fluid environments.
             </p>
-
-            <ul>
-                <li>Modular software architecture in Python.</li>
-                <li>Camera-based local perception.</li>
-                <li>Extended Kalman Filter for localization.</li>
-                <li>A* path planning for navigation.</li>
-                <li>Finite-state-machine-based mission logic.</li>
-                <li>Serial communication with the embedded controller.</li>
-            </ul>
 
             <div class="tags">
                 <span class="tag">Python</span>
-                <span class="tag">Computer Vision</span>
-                <span class="tag">EKF</span>
-                <span class="tag">A*</span>
-                <span class="tag">Raspberry Pi</span>
-                <span class="tag">ESP32</span>
-                <span class="tag">Embedded Systems</span>
+                <span class="tag">MuJoCo</span>
+                <span class="tag">LilyTorch</span>
+                <span class="tag">Fluid Dynamics</span>
+                <span class="tag">Numerical Simulation</span>
+                <span class="tag">Robotics</span>
+                <span class="tag">Debugging</span>
             </div>
         </section>
 
         <section>
-            <h2>Results</h2>
+            <h2>Next Steps</h2>
 
             <p>
-                Our team finished first in the EPFL Interdisciplinary
-                Robotics Competition 2026.
+                The next steps involve improving the reliability of
+                the fluid–robot coupling, investigating the resulting
+                forces and torques, and establishing a more robust
+                simulation setup for studying underwater locomotion.
             </p>
 
             <p>
-                The project gave me practical experience in autonomous
-                robotics, software integration, and collaborative
-                development under competition constraints.
+                As the project progresses, this page will be updated
+                with validated results and further technical details.
             </p>
         </section>
 
         <section>
             <h2>Links</h2>
-
-            <a class="button"
-               href="https://github.com/Megapaul25"
-               target="_blank"
-               rel="noopener noreferrer">
-                GitHub
-            </a>
 
             <a class="button" href="../index.html#projects">
                 More projects
@@ -377,3 +370,4 @@
 
 </body>
 </html>
+
