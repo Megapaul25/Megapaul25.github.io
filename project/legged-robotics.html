@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Interdisciplinary Robotics Competition — Paul Huot-Marchand</title>
+    <title>Quadruped Locomotion with CPG and DRL — Paul Huot-Marchand</title>
 
     <style>
         * {
@@ -233,39 +232,33 @@
                 ← Back to portfolio
             </a>
 
-            <div class="label">// PROJECT · 2026</div>
+            <div class="label">// PROJECT · DECEMBER 2025</div>
 
-            <h1>Interdisciplinary Robotics Competition</h1>
+            <h1>Quadruped Locomotion with CPGs and DRL</h1>
 
             <div class="subtitle">
-                Autonomous robotics · EPFL
+                Mini Project 2 — Legged Robots · EPFL
             </div>
 
             <div class="award">
-                🏆 1st Place — Team ROBZ, Group 4
+                🤖 Team Project — Paul Huot-Marchand, Joaquín Vásquez Romo, Josua Bubenzer
             </div>
 
             <img
                 class="hero-image"
-                src="../images/Robotic_competition_cover.jpeg"
-                alt="Competition robot">
+                src="../images/Legged_robots_cover.jpeg"
+                alt="Quadruped Robot Locomotion">
         </header>
 
         <section>
             <h2>Overview</h2>
 
             <p>
-                As part of the EPFL Interdisciplinary Robotics
-                Competition 2026, I worked in a three-person team
-                to develop an autonomous robot capable of navigating
-                an arena, handling obstacles, and completing a
-                sequence of tasks.
+                The goal of this project was to implement Central Pattern Generator (CPG)-based control for quadruped locomotion across four distinct gaits: trot, pace, walk, and bound[cite: 31]. The study explores the impact of control gains and hyperparameter tuning on gait performance, transitioning from classical control to a Deep Reinforcement Learning (DRL) architecture[cite: 31].
             </p>
 
             <p>
-                My main responsibility was the high-level software,
-                from visual perception and localization to navigation
-                and autonomous mission execution.
+                My contributions centered on completing the Hopf oscillator network implementation[cite: 31], mapping phase/amplitude states to Cartesian foot trajectories[cite: 31], tuning controller PD gains[cite: 31, 32], and integrating CPG modulation into a Proximal Policy Optimization (PPO) reinforcement learning pipeline for slope traversal[cite: 34, 37].
             </p>
         </section>
 
@@ -274,38 +267,30 @@
 
             <div class="grid">
                 <div class="panel">
-                    <h3>Computer Vision</h3>
+                    <h3>Hopf CPG Network</h3>
                     <p>
-                        Implemented local visual perception to extract
-                        information from the robot's camera and support
-                        autonomous decision making.
+                        Implemented coupled Hopf-based CPG state equations and coupling phase matrices ($\Phi$) for quadruped gaits (trot, pace, walk, bound)[cite: 31, 39]. Mapped phase/amplitude outputs to Cartesian foot trajectories and managed swing/stance phase switching[cite: 31].
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Localization</h3>
+                    <h3>Gain & Hyperparameter Tuning</h3>
                     <p>
-                        Developed the localization pipeline and an
-                        Extended Kalman Filter to estimate the robot's
-                        position and orientation.
+                        Analyzed Cartesian vs. joint-level PD gain trade-offs between tracking precision and damping/stability[cite: 31, 32]. Conducted systematic parameter sweeps across step length, ground clearance, and frequency to yield high-speed ($2.75\text{ m/s}$) and low-speed gaits[cite: 32].
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Navigation</h3>
+                    <h3>Observation & Action Spaces</h3>
                     <p>
-                        Implemented path planning using A* and
-                        integrated navigation decisions into the
-                        robot's high-level software.
+                        Evaluated full, medium, and minimal observation configurations alongside joint PD, Cartesian PD, and CPG parameter modulation action spaces[cite: 35]. Demonstrated that CPG modulation achieves smooth, hardware-safe coordinated locomotion[cite: 35, 36].
                     </p>
                 </div>
 
                 <div class="panel">
-                    <h3>Mission Execution</h3>
+                    <h3>RL Slope Adaptation</h3>
                     <p>
-                        Structured the autonomous behavior as a
-                        state machine coordinating perception,
-                        navigation, and task execution.
+                        Designed custom reward functions (penalizing pitch rate, roll angle, and mechanical power) and fine-tuned pre-trained PPO walking policies on static and randomized slopes ($0.1$ to $0.3\text{ rad}$)[cite: 36, 37].
                     </p>
                 </div>
             </div>
@@ -315,28 +300,27 @@
             <h2>Technical Implementation</h2>
 
             <p>
-                The high-level software ran in Python on a Raspberry
-                Pi and communicated with the robot's ESP32-based
-                low-level controller.
+                The framework couples high-level learning policies with low-level pattern generation and motor controllers[cite: 33, 35]. By using PPO to modulate underlying CPG frequencies and amplitudes, the learning process is constrained, improving sample efficiency and motion smoothness[cite: 35, 36, 38].
             </p>
 
             <ul>
-                <li>Modular software architecture in Python.</li>
-                <li>Camera-based local perception.</li>
-                <li>Extended Kalman Filter for localization.</li>
-                <li>A* path planning for navigation.</li>
-                <li>Finite-state-machine-based mission logic.</li>
-                <li>Serial communication with the embedded controller.</li>
+                <li>Hopf oscillator state mapping for Cartesian foot trajectories in swing and stance phases[cite: 31].</li>
+                <li>Coupling phase matrix definition for inter-limb coordination across trot, bound, pace, and lateral sequence walk[cite: 31, 39].</li>
+                <li>Multi-stage parameter sweep visual heatmaps ($\omega_{\text{stance}}$, $\omega_{\text{swing}}$, ground clearance, step length)[cite: 32, 40].</li>
+                <li>Proximal Policy Optimization (PPO) policy optimization with 10 parallel environments (PyBullet/Gym)[cite: 34, 35].</li>
+                <li>Custom pitch/roll stability and pitch rate reward formulations for slope ascension/descension[cite: 36, 37].</li>
+                <li>Domain randomization incorporating Gaussian observation noise and variable ground friction ($\mu_k \in [0.5, 1.0]$)[cite: 37].</li>
             </ul>
 
             <div class="tags">
                 <span class="tag">Python</span>
-                <span class="tag">Computer Vision</span>
-                <span class="tag">EKF</span>
-                <span class="tag">A*</span>
-                <span class="tag">Raspberry Pi</span>
-                <span class="tag">ESP32</span>
-                <span class="tag">Embedded Systems</span>
+                <span class="tag">PyBullet / Gym</span>
+                <span class="tag">Central Pattern Generators (CPG)</span>
+                <span class="tag">Deep Reinforcement Learning</span>
+                <span class="tag">PPO</span>
+                <span class="tag">Hopf Oscillators</span>
+                <span class="tag">Robot Locomotion</span>
+                <span class="tag">Control Theory</span>
             </div>
         </section>
 
@@ -344,14 +328,11 @@
             <h2>Results</h2>
 
             <p>
-                Our team finished first in the EPFL Interdisciplinary
-                Robotics Competition 2026.
+                Tuned CPG parameters achieved a stable trot gait with a peak forward velocity of $2.75\text{ m/s}$ and a low Cost of Transport ($\text{CoT} = 1.68$)[cite: 32].
             </p>
 
             <p>
-                The project gave me practical experience in autonomous
-                robotics, software integration, and collaborative
-                development under competition constraints.
+                In reinforcement learning experiments, modulating CPG parameters via PPO outperformed direct joint/Cartesian PD control in motion coordination and energy efficiency[cite: 36, 38]. The fine-tuned policy successfully traversed variable slopes up to $0.3\text{ rad}$ while dynamically adjusting stance leg duty cycles[cite: 37].
             </p>
         </section>
 
@@ -373,9 +354,8 @@
     </main>
 
     <footer>
-        © 2026 Paul Huot-Marchand
+        © 2025 Paul Huot-Marchand · EPFL Legged Robots Group[cite: 31]
     </footer>
 
 </body>
 </html>
-```
