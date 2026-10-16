@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -183,6 +184,23 @@
             margin: 5px 8px 5px 0;
         }
 
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: #010409;
+        }
+
+        .video-wrapper video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -237,7 +255,7 @@
             <h1>Interdisciplinary Robotics Competition</h1>
 
             <div class="subtitle">
-                Autonomous robotics · EPFL
+                Autonomous Robotics · EPFL
             </div>
 
             <div class="award">
@@ -247,23 +265,26 @@
             <img
                 class="hero-image"
                 src="../images/Robotic_competition_cover.jpeg"
-                alt="Competition robot">
+                alt="Robot developed for the EPFL Interdisciplinary Robotics Competition"
+            >
         </header>
 
         <section>
             <h2>Overview</h2>
 
             <p>
-                As part of the EPFL Interdisciplinary Robotics
-                Competition 2026, I worked in a three-person team
-                (Team ROBZ, Group 4: Arnaud Buchel, Jan Juraszek, and myself)
-                to develop an autonomous robot capable of navigating
-                an arena with multiple scoring zones (Zone 1 to Zone 4), handling obstacles, and completing a
-                sequence of tasks.
+                As part of the EPFL Interdisciplinary Robotics Competition
+                2026, I worked in a three-person team (Team ROBZ, Group 4)
+                with Arnaud Buchel and Jan Juraszek to develop an autonomous
+                robot capable of navigating an arena, collecting different
+                LEGO Duplo assemblies, handling obstacles, and completing
+                a sequence of tasks.
             </p>
 
             <p>
-                My main responsibility was the high-level software, from visual perception and beacon-based localization to navigation and autonomous mission execution.
+                My main responsibility was the high-level software,
+                including visual perception, beacon-based localization,
+                navigation, and autonomous mission execution.
             </p>
         </section>
 
@@ -271,33 +292,56 @@
             <h2>My Contributions</h2>
 
             <div class="grid">
+
                 <div class="panel">
                     <h3>Computer Vision</h3>
+
                     <p>
-                        Implemented local visual perception using RGB camera processing to extract target features, detect arena corner beacons, and support real-time autonomous decision making.
+                        Implemented two computer vision algorithms:
+                        one using an RGB camera to detect localization
+                        beacons, and another using an RGB-D camera to
+                        detect and locate obstacles and targets.
+                    </p>
+
+                    <p>
+                        Both algorithms used a classical computer vision
+                        pipeline combining HSV color filtering, image
+                        processing (grayscale conversion, blurring, and
+                        Canny edge detection), and morphological operations.
                     </p>
                 </div>
 
                 <div class="panel">
                     <h3>Localization</h3>
+
                     <p>
-                        Developed the global beacon-based triangulation algorithm (solving circle intersections from relative angles) combined with an Extended Kalman Filter (EKF) sensor fusion to estimate the robot's pose.
+                        Developed a beacon-based triangulation algorithm
+                        using relative angles and circle intersections.
+                        Combined it with an Extended Kalman Filter (EKF)
+                        to estimate the robot's pose.
                     </p>
                 </div>
 
                 <div class="panel">
                     <h3>Navigation</h3>
+
                     <p>
-                        Implemented path planning using the A* algorithm and integrated navigation decision-making directly into the robot's high-level controller.
+                        Implemented path planning using the A* algorithm
+                        and integrated navigation decisions into the
+                        robot's high-level controller.
                     </p>
                 </div>
 
                 <div class="panel">
                     <h3>Mission Execution</h3>
+
                     <p>
-                        Structured the autonomous behavior as a Finite State Machine (FSM) coordinating perception, navigation, piece-collecting mechanisms, and task execution.
+                        Structured the autonomous behavior as a Finite
+                        State Machine (FSM), coordinating perception,
+                        navigation, object collection, and task execution.
                     </p>
                 </div>
+
             </div>
         </section>
 
@@ -305,16 +349,43 @@
             <h2>Technical Implementation</h2>
 
             <p>
-                The high-level software ran in Python on a Raspberry Pi Single Board Computer (SBC) handling vision and path planning, communicating via serial interface with an ESP32 microcontroller for low-level motor control and sensor monitoring.
+                The high-level software ran in Python on a Raspberry Pi,
+                handling vision and path planning. It communicated through
+                a serial interface with an ESP32 microcontroller responsible
+                for low-level motor control and sensor monitoring.
+            </p>
+
+            <p>
+                I implemented the high-level software from scratch in
+                Python, without relying on pre-built robotics or
+                path-planning libraries, to maintain control over the
+                algorithms and their integration.
             </p>
 
             <ul>
-                <li>Modular software architecture written in Python running on Raspberry Pi.</li>
-                <li>Camera-based visual perception for target detection and beacon landmark triangulation.</li>
-                <li>Extended Kalman Filter (EKF) combining wheel encoders and optical measurements for drift-free localization.</li>
-                <li>A* algorithm for optimal path planning across arena zones.</li>
-                <li>Finite-State-Machine (FSM) orchestrating mission logic, grabbing, storage, and trapdoor releasing.</li>
-                <li>Serial communication protocol between the Raspberry Pi SBC and the ESP32 low-level MCU.</li>
+                <li>
+                    Modular software architecture written in Python
+                    and running on a Raspberry Pi.
+                </li>
+                <li>
+                    Camera-based perception for target detection
+                    and beacon-based localization.
+                </li>
+                <li>
+                    Extended Kalman Filter (EKF) for sensor fusion
+                    and improved pose estimation.
+                </li>
+                <li>
+                    A* algorithm for path planning across the arena.
+                </li>
+                <li>
+                    Finite State Machine (FSM) coordinating mission
+                    logic, object collection, storage, and release.
+                </li>
+                <li>
+                    Serial communication between the Raspberry Pi
+                    and the ESP32 microcontroller.
+                </li>
             </ul>
 
             <div class="tags">
@@ -330,24 +401,56 @@
         </section>
 
         <section>
+            <h2>Competition Video</h2>
+
+            <p>
+                Watch our robot in action during the competition.
+            </p>
+
+            <div class="video-wrapper">
+                <video controls preload="metadata" playsinline>
+                    <source
+                        src="../videos/competition.mp4"
+                        type="video/mp4"
+                    >
+                    Your browser does not support HTML video.
+                    <a href="../videos/competition.mp4">
+                        Watch the competition video
+                    </a>.
+                </video>
+            </div>
+        </section>
+
+        <section>
             <h2>Results</h2>
 
             <p>
-                Our team (ROBZ) finished 1st place in the EPFL Interdisciplinary Robotics Competition 2026.
+                Our team, ROBZ, finished in 1st place in the EPFL
+                Interdisciplinary Robotics Competition 2026.
             </p>
 
             <p>
-                The project provided hands-on experience in system architecture decomposition, sensor fusion, real-time vision processing, and hardware-software integration under competitive constraints.
+                The project provided hands-on experience in system
+                architecture, sensor fusion, real-time vision processing,
+                and hardware-software integration under competitive
+                constraints.
+            </p>
+
+            <p>
+                It also strengthened my skills in project management,
+                risk analysis, and teamwork.
             </p>
         </section>
 
         <section>
             <h2>Links</h2>
 
-            <a class="button"
-               href="https://github.com/Megapaul25"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+                class="button"
+                href="https://github.com/Megapaul25"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 GitHub
             </a>
 
